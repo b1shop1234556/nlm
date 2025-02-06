@@ -43,7 +43,6 @@ export const routes: Routes = [
       // ],
       //   canActivate:[loginGuard] 
     },
-    
     { path: 'main-page', component: MainPageComponent,
       children: [
         { path: 'homepage', 

@@ -1,1 +1,92 @@
-<p>registration works!</p>
+<div class="container">
+    <header>Registration</header>
+    <form>
+        <div class="form first">
+            <div class="details spouse">
+                <span class="title">Spouse Details</span>
+                <div class="fields">
+                    <div class="input-field2">
+                        <label>Spouse Name</label>
+                        <input type="text" formControlName="spouse_name" class="form-control" placeholder="Enter spouse name">
+                    </div>
+                    <div class="input-field2">
+                        <label>Date of Marriage</label>
+                        <input type="date" formControlName="marriage_date" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="details children">
+                <div class="title-container">
+                    <span class="title">Children Details</span>
+                    <button type="button" class="btn-plus small-btn" onclick="addChild()">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add Child
+                    </button>                    
+                </div>
+                <div class="fields" id="childrenContainer">
+                    <div class="input-field">
+                        <label>Child Name</label>
+                        <input type="text" formControlName="child_name" class="form-control" placeholder="Enter child name">
+                    </div>
+                    <div class="input-field">
+                        <label>Birthday</label>
+                        <input type="date" formControlName="child_birthday" class="form-control">
+                    </div>
+                    <div class="input-field">
+                        <label>Career</label>
+                        <input type="text" formControlName="child_career" class="form-control" placeholder="Enter child career">
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <div class="details employee">
+                <span class="title">Employee Details</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Position</label>
+                        <input type="text" formControlName="position" class="form-control" placeholder="Enter position">
+                    </div>
+                    <div class="input-field">
+                        <label>Date of Employment</label>
+                        <input type="date" formControlName="employment_date" class="form-control">
+                    </div>
+                    <div class="input-field">
+                        <label>Organization</label>
+                        <input type="text" formControlName="organization" class="form-control" placeholder="Enter organization">
+                    </div>
+                </div>
+            </div>
+
+            <div class="details education">
+                <span class="title">Education</span>
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Elementary</label>
+                        <input type="text" formControlName="elementary" class="form-control" placeholder="Enter elementary school">
+                    </div>
+                    <div class="input-field">
+                        <label>High School</label>
+                        <input type="text" formControlName="highschool" class="form-control" placeholder="Enter high school">
+                    </div>
+                    <div class="input-field">
+                        <label>College</label>
+                        <input type="text" formControlName="college" class="form-control" placeholder="Enter college">
+                    </div>
+                    <div class="input-field">
+                        <label>Graduate School</label>
+                        <input type="text" formControlName="gradschool" class="form-control" placeholder="Enter graduate school">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button type="submit" class="submit">
+                <span class="btnText">Register</span>
+                <!-- <i class="uil uil-navigator"></i> -->
+            </button>
+        </div>
+    </form>
+</div>

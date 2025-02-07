@@ -1,0 +1,35 @@
+<!-- <p>my-leave-request works!</p> -->
+<div class="container">
+    <header>Apply for Leave</header>
+    <form>
+        <div class="form-section">
+            <div class="input-field">
+                <label for="leave-type">Leave Type</label>
+                <select id="leave-type" name="leave_type" class="form-control" required>
+                    <option value="" disabled selected>Select leave type</option>
+                    <option value="sick">Sick Leave</option>
+                    <option value="vacation">Vacation Leave</option>
+                    <option value="personal">Personal Leave</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-field">
+                <label for="from-date">From Date</label>
+                <input type="date" id="from-date" name="from_date" class="form-control" required>
+            </div>
+            <div class="input-field">
+                <label for="to-date">To Date</label>
+                <input type="date" id="to-date" name="to_date" class="form-control" required>
+            </div>
+            <div class="input-field">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" class="form-control" placeholder="Enter reason for leave" rows="4" required></textarea>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="submit" class="submit">
+                <span class="btnText">Apply</span>
+            </button>
+        </div>
+    </form>
+</div>

@@ -11,14 +11,10 @@ import { ConnectService } from '../../../connect.service';
 import { MatDialog } from '@angular/material/dialog';
 import { MyLeaveRequestComponent } from '../my-leave-request/my-leave-request.component';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
-
-
 @Component({
   selector: 'app-view',
   standalone: true,
-  imports: [
-    CommonModule, 
+  imports: [CommonModule, 
     RouterModule, 
     MatProgressSpinnerModule,
     MatFormField,MatLabel,
@@ -29,7 +25,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    MatSidenavModule,
     
   ],
   templateUrl: './view.component.html',
@@ -46,9 +41,6 @@ export class ViewComponent {
   activeSection: string = 'dashboard'; // Default active section
   uid: any;
   searchTerm: string = '';
-
-  sidenavWidth: number = 250;
-  
   //  searchTerm: string = '';
     // currentDate: Date = new Date(); 
     // activeSection: string = 'dashboard'; 

@@ -136,6 +136,11 @@ h3 {
   border: 1px solid #ffc107; /* Maintain yellow border for consistency */
 }
 
+.bg-c-red {
+  background: linear-gradient(45deg, #632be7, #FF6F61); /* Coral and yellow gradient */
+  border: 1px solid #ff7707; /* Maintain yellow border for consistency */
+}
+
 
 /* Notification Styles */
 .card-body-notif {

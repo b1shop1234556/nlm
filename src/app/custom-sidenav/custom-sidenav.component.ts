@@ -83,12 +83,12 @@ export class CustomSidenavComponent {
       this.menuItems.set([
         {
           icon: 'account_circle',
-          label: 'View Personal Profile',
+          label: 'Profile',
           route: 'homepage'
         },
         {
           icon: 'meeting_room',
-          label: 'Request leaves',
+          label: 'Leave Request',
           route: 'leavepage'
         },
         {
@@ -128,12 +128,12 @@ export class CustomSidenavComponent {
   menuItems = signal<MenuItem[]>([
     {
       icon: 'account_circle',
-      label: 'View Profile',
+      label: 'Profile',
       route: 'homepage'
     },
     {
       icon: 'meeting_room',
-      label: 'leaves Request',
+      label: 'Leave Request',
       route: 'leavepage'
     },
     {

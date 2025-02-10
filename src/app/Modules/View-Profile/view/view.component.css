@@ -507,3 +507,88 @@ table tbody tr:hover {
 table td {
   color: #333;
 }
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  /* Ensure cards take full width on small screens */
+  .col-6 {
+    width: 100%;
+  }
+
+  /* Adjust cards to stack */
+  .card {
+    width: 100%;
+  }
+
+  /* Banner Layout for Small Screens */
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .illustration {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .illustration img {
+    width: 80%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .text-content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+
+  .welcome-message {
+    font-size: 22px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-body i {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .card-body h2 {
+    font-size: 22px;
+  }
+
+  .card-body p {
+    font-size: 12px;
+  }
+
+  /* Reduce margin and padding */
+  .banner {
+    padding: 10px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+  
+  .banner .subtext {
+    font-size: 14px;
+  }
+}

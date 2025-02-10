@@ -220,14 +220,14 @@ h3 {
   width: 100%;
   max-width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  gap: 20px; /* Space between image and text */
+  gap: 300px; /* Space between image and text */
 }
 
 .illustration {
   display: flex;
   align-items: right;
   justify-content: right;
-  max-width: 60%; /* Set max-width to control image area */
+  max-width: 40%; /* Set max-width to control image area */
   padding-right: 20px;
 }
 

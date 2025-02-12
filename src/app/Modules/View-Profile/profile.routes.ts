@@ -6,7 +6,7 @@ import { MyLeaveRequestComponent } from './my-leave-request/my-leave-request.com
 import { RejectRequestComponent } from './reject-request/reject-request.component';
 
 export const profilehome: Routes = [
-    {path: 'homepage', component: ViewMainPageComponent,
+    {path: 'profile', component: ViewMainPageComponent,
         children: [
             {path: 'view', component: ViewComponent},
             {path: 'approve', component: ApproveRequestComponent},
@@ -15,5 +15,5 @@ export const profilehome: Routes = [
             {path: '', redirectTo: 'view', pathMatch: 'full'}
         ]
     },
-    {path: '', redirectTo: 'homepage', pathMatch: 'full'}
+    {path: '', redirectTo: 'profile', pathMatch: 'full'}
 ];

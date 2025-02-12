@@ -3,11 +3,16 @@ import { ApplyRequestComponent } from '../apply-request/apply-request.component'
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { ConnectService } from '../../../connect.service';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+import { RouterModule, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-leave',
@@ -17,7 +22,15 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     MatInputModule, 
     MatTableModule, 
     MatButtonModule, 
-    MatDialogModule
+    MatDialogModule,
+    RouterModule, 
+    MatProgressSpinnerModule,
+    MatFormField,MatLabel,
+    RouterLink,
+    MatSelectModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './leave.component.html',
   styleUrl: './leave.component.css'

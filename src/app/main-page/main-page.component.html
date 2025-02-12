@@ -55,7 +55,7 @@
 
   <!-- Profile Dropdown Menu -->
   <mat-menu #profileMenu="matMenu">
-      <button mat-menu-item [routerLink]="['/main-page/account/account']">
+      <button mat-menu-item [routerLink]="['/main-page/accountmain/accountmain/account']">
           <mat-icon>settings</mat-icon>
           <span>Account Settings</span>
       </button>
@@ -76,12 +76,12 @@
       <app-custom-sidenav [collapsed]="collapsed()"/>
     </mat-sidenav>
 
-    <mat-sidenav 
+    <!-- <mat-sidenav 
     [opened]="!collapsed()" 
     mode="over"
     (closedStart)="collapsed.set(true)">
     <app-custom-sidenav [collapsed]="collapsed()"/>
-    </mat-sidenav>
+    </mat-sidenav> -->
   
     <mat-sidenav-content class="content" [style.margin-left]="sidenavWidth()">
       <router-outlet></router-outlet>

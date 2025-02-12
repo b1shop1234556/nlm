@@ -82,9 +82,14 @@ export class CustomSidenavComponent {
     updateMenuItems() {
       this.menuItems.set([
         {
+          icon: 'dashboard',
+          label: 'Dashboard',
+          route: 'dashmain'
+        },
+        {
           icon: 'account_circle',
           label: 'Profile',
-          route: 'homepage'
+          route: 'profile'
         },
         {
           icon: 'meeting_room',
@@ -127,9 +132,14 @@ export class CustomSidenavComponent {
     }
   menuItems = signal<MenuItem[]>([
     {
+      icon: 'dashboard',
+      label: 'Dashboard',
+      route: 'dashmain'
+    },
+    {
       icon: 'account_circle',
       label: 'Profile',
-      route: 'homepage'
+      route: 'profile'
     },
     {
       icon: 'meeting_room',

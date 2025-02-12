@@ -18,6 +18,8 @@ import { profilehome } from './Modules/View-Profile/profile.routes';
 import { leavehome } from './Modules/Leave-Request/leave.routes';
 import { announcementhome } from './Modules/Announcement/announcement.routes';
 import { RegistrationComponent } from './registration/registration.component';
+import { dashboardhome } from './Modules/Dashboard/dashboard.routes';
+import { accounthome } from './Modules/Account/account.routes';
 // import { parentroutes } from './Modules/Parent/parent.routes';
 
 
@@ -45,7 +47,11 @@ export const routes: Routes = [
     },
     { path: 'main-page', component: MainPageComponent,
       children: [
-        { path: 'homepage', 
+        { path: 'dashmain', 
+          loadChildren: () => import('./Modules/Dashboard/dashboard.routes').then(r => dashboardhome),
+          // canActivate:[authGuard] 
+        },
+        { path: 'profile', 
           loadChildren: () => import('./Modules/View-Profile/profile.routes').then(r => profilehome),
           // canActivate:[authGuard] 
         },
@@ -58,10 +64,10 @@ export const routes: Routes = [
             import('./Modules/Announcement/announcement.routes').then((r) => announcementhome),
           // canActivate:[authGuard] 
         },
-        // {  path: 'teacher', 
-        //   loadChildren: () => import('./Modules/Teacher/teacher.routes').then(r => teacherroutes),
-        //   canActivate:[authGuard] 
-        // },
+        {  path: 'accountmain', 
+          loadChildren: () => import('./Modules/Account/account.routes').then(r => accounthome),
+          // canActivate:[authGuard] 
+        },
         // {  path: 'section', 
         //   loadChildren: () => import('./Modules/SectionManagement/section.routes').then(r => sectionroutes),
         //   canActivate:[authGuard]
@@ -82,7 +88,7 @@ export const routes: Routes = [
         //   loadChildren: () => import('./Modules/Account/account.routes').then(r => accountroutes),
         //   canActivate:[authGuard] 
         // },
-        { path: '', redirectTo: 'homepage', pathMatch: 'full' }
+        { path: '', redirectTo: 'dashmain', pathMatch: 'full' }
       ],
     },
     { path: '', redirectTo: 'login', pathMatch: 'full' }

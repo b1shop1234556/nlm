@@ -6,6 +6,7 @@ import { RouterLink, RouterModule, Router } from '@angular/router';
 // import Swal from 'sweetalert2'; 
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
+import { ConnectService } from '../connect.service';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -13,7 +14,10 @@ import { MatIcon } from '@angular/material/icon';
   imports: [
     RouterModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    MatIcon,
+    MatFormField,
+    MatLabel
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'] // Corrected from styleUrl to styleUrls
@@ -24,7 +28,20 @@ export class LoginComponent {
     password: new FormControl(''),
   });
 
-  // constructor(private conn: ConnectService, private router: Router) {}
+  constructor(private conn: ConnectService, private router: Router) {}
+
+  login() {
+        this.conn.login(this.loginForm.value)
+        .subscribe((result: any) => {
+            if (result.token != null) {
+             this.conn.saveToken(result.token);
+             localStorage.setItem('token', result.token);
+             console.log(this.conn.getCookie('token'))
+            }
+              console.log(result)
+            })
+      }
+        
 
 //   login() {
 //     this.conn.login(this.loginForm.value).subscribe(

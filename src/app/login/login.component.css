@@ -13,3 +13,7 @@
     background-color: #3abcf9b7; 
    
   }
+
+  @media (max-width:480px) {
+    .mdh{display:none;}
+  }

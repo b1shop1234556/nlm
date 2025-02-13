@@ -7,12 +7,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConnectService {
-  saveToken(token: any) {
-    throw new Error('Method not implemented.');
-  }
-  getCookie(arg0: string): any {
-    throw new Error('Method not implemented.');
-  }
 
   constructor(private http: HttpClient) {}
 

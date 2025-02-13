@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterLink, RouterModule, Router } from '@angular/router';
 // import { ConnectService } from '../connect.service';
-// import Swal from 'sweetalert2'; 
+import Swal from 'sweetalert2'; 
 import { MatFormField, MatLabel } from '@angular/material/form-field';
 import { MatIcon } from '@angular/material/icon';
 import { ConnectService } from '../connect.service';
@@ -31,56 +31,44 @@ export class LoginComponent {
   constructor(private conn: ConnectService, private router: Router) {}
 
   login() {
-        this.conn.login(this.loginForm.value)
-        .subscribe((result: any) => {
-            if (result.token != null) {
-             this.conn.saveToken(result.token);
-             localStorage.setItem('token', result.token);
-             console.log(this.conn.getCookie('token'))
-            }
-              console.log(result)
-            })
-      }
-        
-
-//   login() {
-//     this.conn.login(this.loginForm.value).subscribe(
-//       (result: any) => {
-//         if (result.token != null) {
-//           localStorage.setItem('token', result.token);
-//           localStorage.setItem('admin_id', result.admin.admin_id);
-//           // image get
-//           const user = result.admin;
-//           if (user && user.admin_pic) {
-//             if (!user.admin_pic.startsWith('http://localhost:8000')) {
-//               user.admin_pic = `http://localhost:8000/assets/adminPic/${user.admin_pic}`;
-//             }
-//           }
-//           localStorage.setItem('user', JSON.stringify(user));
+    this.conn.login(this.loginForm.value).subscribe(
+      (result: any) => {
+        if (result.token != null) {
+          localStorage.setItem('token', result.token);
+          // localStorage.setItem('admin_id', result.admin.admin_id);
+          // image get
+          // const user = result.admin;
+          // if (user && user.admin_pic) {
+          //   if (!user.admin_pic.startsWith('http://localhost:8000')) {
+          //     user.admin_pic = `http://localhost:8000/assets/adminPic/${user.admin_pic}`;
+          //   }
+          // }
+          // localStorage.setItem('user', JSON.stringify(user));
           
-//           console.log('Token stored:', result.token);
-//           this.navigateToMainPage();
-//         }
-//         else{
-//           Swal.fire({
-//             icon: "error",
-//             title: "Something went wrong!",
-//             text: "Invalid Email or Password",  
-//           });
-//         }
+          console.log('Token stored:', result.token);
+          // this.navigateToMainPage();
+        }
+        else{
+          Swal.fire({
+            icon: "error",
+            title: "Something went wrong!",
+            text: "Invalid Email or Password",  
+          });
+        }
         
         
-//         console.log(result);
-//       },
-//       (error) => {
-//         Swal.fire({
-//           icon: "error",
-//           title: "Something went wrong!",
-//           text: "Invalid Email or Password",  
-//         });
-//       }
-//     );
-// }
+        console.log(result);
+      },
+      (error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong!",
+          text: "Invalid Email or Password",  
+        });
+      }
+    );
+}
+        
 
 
 //   navigateToMainPage() {
